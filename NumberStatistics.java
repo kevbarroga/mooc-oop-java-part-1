@@ -7,7 +7,7 @@ public class NumberStatistics {
     public NumberStatistics() {
         // initialize here the object variable amountOfNumbers
         this.amountOfNumbers = 0;
-        this.sum = 0
+        this.sum = 0;
     }
 
     public void addNumber(int number) {
@@ -67,8 +67,8 @@ public class NumberStatistics {
                 }
             }
         }
-        System.out.println("sum: " + stats.sum())
-        System.out.println("sum of evens: " + evens.sum())
-        System.out.println("sum of odds: " + odds.sum())
+        System.out.println("sum: " + stats.sum());
+        System.out.println("sum of evens: " + evens.sum());
+        System.out.println("sum of odds: " + odds.sum());
     }
 }
