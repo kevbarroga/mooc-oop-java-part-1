@@ -26,7 +26,11 @@ public class LyyraCard {
     }
 
     public void loadMoney(double amount) {
-        if (this.balance <= 150.00 && amount > 0) {
+		double limit = 150.00;
+		double tempBal = this.balance + amount;
+		if (tempBal > 150.00) {
+			this.balance = 150.00;
+		} else if (this.balance <= 150.00 && amount > 0) {
             this.balance += amount;
         }
     }
@@ -67,7 +71,7 @@ public class LyyraCard {
         System.out.println(card);
 
         System.out.println("Exercise: 77.5 - loading negative");
-        LyyraCard card = new LyyraCard(10);
+        card = new LyyraCard(10);
         System.out.println("Pekka: " + card);
         card.loadMoney(-15);
         System.out.println("Pekka: " + card);
@@ -77,7 +81,7 @@ public class LyyraCard {
         LyyraCard cardBrian = new LyyraCard(30);
 
         cardPekka.payGourmet();
-        cardBrian.payEconomical;
+        cardBrian.payEconomical();
         System.out.println(cardPekka);
         System.out.println(cardBrian);
         cardPekka.loadMoney(20);
