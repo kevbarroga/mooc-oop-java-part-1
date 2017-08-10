@@ -3,7 +3,7 @@ public class Multiplier {
     int multiplier;
 
     public Multiplier(int number) {
-        int this.multiplier = number;
+        this.multiplier = number;
     }
 
     public int multiply(int otherNumber) {
