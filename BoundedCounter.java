@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BoundedCounter {
     private int value;
     private int upperLimit;
@@ -52,7 +54,7 @@ public class BoundedCounter {
         counter = new BoundedCounter(14);
         System.out.println("Value at start: " + counter );
 
-        int i = 0;
+        i = 0;
         while ( i < 16){
             counter.next();
             System.out.println("value: " + counter );
@@ -63,11 +65,15 @@ public class BoundedCounter {
         BoundedCounter minutes = new BoundedCounter(59);
         BoundedCounter hours = new BoundedCounter(23);
 
-        int i = 0;
+        i = 0;
         while ( i < 121 ) {
             System.out.println( hours + ":" + minutes);   // the current time printed
             // advance minutes
+			minutes.next();
             // if minutes become zero, advance hours
+			if (minutes.getValue() == 0) {
+				hours.next();
+			}
             i++;
         }
 
@@ -78,20 +84,28 @@ public class BoundedCounter {
         hours = new BoundedCounter(23);
 
         System.out.print("seconds: ");
-        int s = // read the initial value of seconds from the user
+        int s = Integer.parseInt(reader.nextLine());
+		// read the initial value of seconds from the user
         System.out.print("minutes: ");
-        int m = // read the initial value of minutes from the user
+        int m = Integer.parseInt(reader.nextLine());
         System.out.print("hours: ");
-        int h = // read the initial value of hours from the user
+        int h = Integer.parseInt(reader.nextLine());
 
         seconds.setValue(s);
         minutes.setValue(m);
         hours.setValue(h);
 
-        int i = 0;
+        i = 0;
         while ( i < 121 ) {
             // like in previous but seconds taken into account
-
+			System.out.println( hours + ":" + minutes + ":" + seconds );
+			seconds.next();
+			if (seconds.getValue() == 0) {
+				minutes.next();
+				if (minutes.getValue() == 0) {
+					hours.next();
+				}
+			}
             i++;
         }
 
