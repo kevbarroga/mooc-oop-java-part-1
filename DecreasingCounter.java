@@ -14,7 +14,7 @@ public class DecreasingCounter {
 
     public void decrease() {
         // write here the code that decrements the value of counter by one
-        if (this.value >= 0) {
+        if (this.value > 0) {
             this.value--;
         }
     }
@@ -37,7 +37,7 @@ public class DecreasingCounter {
         counter.decrease();
         counter.printValue();
 
-        DecreasingCounter counter = new DecreasingCounter(2);
+        counter = new DecreasingCounter(2);
         System.out.println("Exercise: 75.2 - value remain positive");
         counter.printValue();
         counter.decrease();
@@ -47,7 +47,7 @@ public class DecreasingCounter {
         counter.decrease();
         counter.printValue();
 
-        DecreasingCounter counter = new DecreasingCounter(100);
+        counter = new DecreasingCounter(100);
         System.out.println("Exercise: 75.3 - counter reset");
         counter.printValue();
 
@@ -57,7 +57,7 @@ public class DecreasingCounter {
         counter.decrease();
         counter.printValue();
 
-        DecreasingCounter counter = new DecreasingCounter(100);
+        counter = new DecreasingCounter(100);
         System.out.println("Exercise: 75.4 - back to initial value");
         counter.printValue();
 
