@@ -54,18 +54,18 @@ public class Counter {
         System.out.println(counter.value());
         System.out.println(counter.check());
         counter.increase();
-        System.out.println(counter.value())
+        System.out.println(counter.value());
         counter.decrease();
-        System.out.println(counter.value())
+        System.out.println(counter.value());
 
         counter.increase(5);
-        System.out.println(counter.value())
+        System.out.println(counter.value());
         counter.decrease(5);
-        System.out.println(counter.value())
+        System.out.println(counter.value());
         counter.decrease(5);
-        System.out.println(counter.value())
+        System.out.println(counter.value());
         counter.decrease(5);
-        System.out.println(counter.value())
+        System.out.println(counter.value());
 
     }
 }
