@@ -13,15 +13,16 @@ public class PasswordRandomizer {
 
     public String createPassword() {
       // Write the code here which returns the new password
-        char lowerCase = "abcdefghijklmnopqrstuvwxyz";
-        char upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        char numbers = "0123456789";
-        char special = "`~!@#$%^&*()_=-+[]{}\|;:'\",.<>/?";
+        String lowerCase = "abcdefghijklmnopqrstuvwxyz";
+		String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String numbers = "0123456789";
+        String special = "`~!@#$%^&*()_=-+[]{}\\|;:'\",.<>/?";
         String pw = "";
 
         for (int i=0; i<this.pwlength; i++) {
-            pw += lowerCase.charAt(this.random.nextInt(25))
+            pw += lowerCase.charAt(this.random.nextInt(25));
         }
+		return pw;
 
     }
 }

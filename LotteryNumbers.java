@@ -2,16 +2,16 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class LotteryNumbers {
-    private ArrayList<Integert> numbers;
+    private ArrayList<Integer> numbers;
 
     public LotteryNumbers() {
         // We'll format a list for the numbers
-        this.numbers = new ArrayList<Integert>();
+        this.numbers = new ArrayList<Integer>();
         // Draw numbers as LotteryNumbers is created
         this.drawNumbers();
     }
 
-    public ArrayList<Integert> numbers() {
+    public ArrayList<Integer> numbers() {
         return this.numbers;
     }
 
@@ -21,11 +21,12 @@ public class LotteryNumbers {
 
     public boolean containsNumber(int number) {
         // Test here if the number is already among the drawn numbers
+		return true;
     }
 
     public static void main(String[] args) {
         LotteryNumbers lotteryNumbers = new LotteryNumbers();
-        ArrayList<Integert> numbers = lotteryNumbers.numbers();
+        ArrayList<Integer> numbers = lotteryNumbers.numbers();
 
         System.out.println("Lottery numbers:");
         for (int number : numbers) {
