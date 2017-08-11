@@ -5,7 +5,7 @@ public class Counter {
 
     public Counter(int startingValue, boolean check) {
         this.value = startingValue;
-        this.nonNegative = check
+        this.nonNegative = check;
     }
 
     public Counter(int startingValue) {
@@ -38,7 +38,7 @@ public class Counter {
         }
     }
 
-    public void decrease(decreaseAmt) {
+    public void decrease(int decreaseAmt) {
         if (this.nonNegative && this.value >= decreaseAmt) {
             this.value -= decreaseAmt;
         }
