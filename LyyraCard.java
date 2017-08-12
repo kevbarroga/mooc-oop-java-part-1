@@ -25,20 +25,18 @@ public class LyyraCard {
         }
     }
 
+	public double balance() {
+		return this.balance;
+	}
+
     public void loadMoney(double amount) {
-		double limit = 150.00;
-		double tempBal = this.balance + amount;
-		if (tempBal > 150.00) {
-			this.balance = 150.00;
-		} else if (this.balance <= 150.00 && amount > 0) {
-            this.balance += amount;
-        }
+		this.balance += amount;
     }
 
     public boolean pay(double amount) {
         if (this.balance >= amount) {
             this.balance -= amount;
-            return true
+            return true;
         } else {
             return false;
         }
