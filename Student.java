@@ -5,6 +5,11 @@ public class Student {
     private String name;
     private String studentNumber;
 
+	public Student(String name, String number) {
+		this.name = name;
+		this.studentNumber = number;
+	}
+
     public String getName(){
         return this.name;
     }
@@ -47,7 +52,7 @@ public class Student {
         System.out.println("EXERCISE 88.3: SEARCH");
         String searchTerm = ".";
 
-        System.out.print("Give search tern: ")
+        System.out.print("Give search term: ");
         searchTerm = reader.nextLine();
         System.out.println("Result");
         for (Student student : list) {
