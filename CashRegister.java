@@ -13,32 +13,32 @@ public class CashRegister {
     public double payEconomical(double cashGiven) {
         // the price of the economical lunch is 2.50 euros
         // if the given cash is at least the price of the lunch:
-        if (this.cashGiven >= 2.50) {
+        if (cashGiven >= 2.50) {
         //    the price of lunch is added to register
-            this.cashInRegister += this.cashGiven;
+            this.cashInRegister += 2.50;
         //    the amount of the sold lunches is incremented by one
             this.economicalSold++;
         //    the method returns cashGiven - lunch price
-            return this.cashGiven;
+            return cashGiven - 2.50;
         } else {
         // if not enough money is given, all is returned and nothing else happens
-            return this.cashGiven;
+            return cashGiven;
         }
     }
 
     public double payGourmet(double cashGiven) {
         // the price of the gourmet lunch is 4.00 euros
         // if the given cash is at least the price of the lunch:
-        if (this.cashGiven >= 4.00) {
+        if (cashGiven >= 4.00) {
         //    the price of lunch is added to the register
-            this.cashInRegister += this.cashGiven;
+            this.cashInRegister += 4.00;
         //    the amount of the sold lunches is incremented by one
             this.gourmetSold++;
         //    the method returns cashGiven - lunch price
-            return this.cashGiven;
+            return cashGiven - 4.00;
         } else {
         // if not enough money is given, all is returned and nothing else happens
-            return this.cashGiven;
+            return cashGiven;
         }
     }
 
@@ -100,7 +100,7 @@ public class CashRegister {
         System.out.println("Exercise: 86.3 - Paying with card");
         unicafeExactum = new CashRegister();
 
-        double theChange = unicafeExactum.payEconomical(10);
+        theChange = unicafeExactum.payEconomical(10);
         System.out.println("the change was " + theChange );
 
         LyyraCard cardOfJim = new LyyraCard(7);
@@ -118,11 +118,11 @@ public class CashRegister {
         unicafeExactum = new CashRegister();
         System.out.println( unicafeExactum );
 
-        LyyraCard cardOfJim = new LyyraCard(2);
+        cardOfJim = new LyyraCard(2);
 
         System.out.println("the card balance " + cardOfJim.balance() + " euros");
 
-        boolean succeeded = unicafeExactum.payGourmet(cardOfJim);
+        succeeded = unicafeExactum.payGourmet(cardOfJim);
         System.out.println("payment success: " + succeeded);
 
         unicafeExactum.loadMoneyToCard(cardOfJim, 100);
