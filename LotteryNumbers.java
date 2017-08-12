@@ -6,11 +6,11 @@ public class LotteryNumbers {
     private Random random;
 
     public LotteryNumbers() {
+        this.random = new Random();
         // We'll format a list for the numbers
         this.numbers = new ArrayList<Integer>();
         // Draw numbers as LotteryNumbers is created
         this.drawNumbers();
-        this.random = new Random();
     }
 
     public ArrayList<Integer> numbers() {
@@ -19,12 +19,12 @@ public class LotteryNumbers {
 
     public void drawNumbers() {
         // Write the number drawing here using the method containsNumber()
-        int rand = this.random.nextInt(38) + 1
-        for (int i = 0; i <= 6; i++){
-            if(!this.containsNumber(rand)) {
-                numbers.add(rand)
-            }
-        }
+		for (int i = 0; i < 7; i++) {
+			int rand = this.random.nextInt(38) + 1;
+			if (!this.containsNumber(rand)) {
+				this.numbers.add(rand);
+			}
+		}
     }
 
     public boolean containsNumber(int number) {
