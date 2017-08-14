@@ -4,7 +4,7 @@ public class NightSky {
     private double density;
     private int width;
     private int height;
-    Random random;
+	private int starsInLastPrint = 0;
 
     public NightSky(double density, int width, int height) {
         this.density = density;
@@ -20,10 +20,10 @@ public class NightSky {
         this(density, 20, 10);
     }
 
-    public String printLine() {
-        Random random = new Random();
+    public void printLine() {
+        Random rand = new Random();
         String stars = "";
-        for (int i = 0; i < this.width, i ++) {
+        for (int i = 0; i < this.width; i ++) {
             if (rand.nextDouble() <= this.density) {
                 stars += "*";
                 starsInLastPrint++;
@@ -31,7 +31,7 @@ public class NightSky {
                 stars += " ";
             }
         }
-        return stars;
+        System.out.println(stars);
     }
 
     public void print() {
