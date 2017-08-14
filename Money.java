@@ -40,28 +40,28 @@ public class Money {
 
     public boolean less(Money compared) {
         if (this.euros > compared.euros) {
-            return false
+            return false;
         }
         if (this.euros == compared.euros) {
             if(this.cents > compared.cents) {
-                return false
+                return false;
             }
         }
         return true;
     }
 
     public Money minus(Money decremented) {
-        if (!this.less(decremented)) {
+        if (this.less(decremented)) {
             int euros1 = 0;
             int cents1 = 0;
 
             return new Money(euros1, cents1);
         } else {
             int euros1 = this.euros - decremented.euros;
-            int cents1 = this.cents = decremented.cents;
+            int cents1 = this.cents - decremented.cents;
             if(this.cents < decremented.cents) {
                 euros1--;
-                cents = 100 - decremented.cents;
+                cents1 = 100 - decremented.cents;
             }
             return new Money(euros1, cents1);
         }
