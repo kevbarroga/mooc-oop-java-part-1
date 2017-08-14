@@ -23,7 +23,6 @@ public class Week_06 {
         System.out.println( "copied: " + Arrays.toString(copied));
 
         System.out.println("EXERCISE 98.2: REVERSE COPY");
-        original = {1, 2, 3, 4};
         int[] reverse = reverseCopy(original);
 
         // print both
@@ -31,7 +30,6 @@ public class Week_06 {
         System.out.println( "reversed: " +Arrays.toString(reverse));
 
         System.out.println("Exercise 99: Array to stars");
-        array = {5, 1, 3, 4, 2};
         printArrayAsStars(array);
     }
 
@@ -48,17 +46,18 @@ public class Week_06 {
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
-        return sum
+        return sum;
     }
 
     public static void printElegantly(int[] array) {
         for(int i = 0; i < array.length; i++) {
-            if (i == array.length) {
+            if (i == array.length - 1) {
                 System.out.print(array[i]);
             } else {
                 System.out.print(array[i]+", ");
             }
         }
+		System.out.println();
     }
 
     public static int[] copy(int[] array) {
@@ -81,8 +80,9 @@ public class Week_06 {
         for (int i = 0; i < array.length; i++) {
             System.out.println();
             for (int j = 0; j < array[i]; j++) {
-                System.out.print("*")
+                System.out.print("*");
             }
         }
+		System.out.println();
     }
 }
