@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Week_06 {
 
     public static void main(String[] args) {
@@ -21,7 +23,7 @@ public class Week_06 {
         System.out.println( "copied: " + Arrays.toString(copied));
 
         System.out.println("EXERCISE 98.2: REVERSE COPY");
-        int[] original = {1, 2, 3, 4};
+        original = {1, 2, 3, 4};
         int[] reverse = reverseCopy(original);
 
         // print both
@@ -29,7 +31,7 @@ public class Week_06 {
         System.out.println( "reversed: " +Arrays.toString(reverse));
 
         System.out.println("Exercise 99: Array to stars");
-        int[] array = {5, 1, 3, 4, 2};
+        array = {5, 1, 3, 4, 2};
         printArrayAsStars(array);
     }
 
