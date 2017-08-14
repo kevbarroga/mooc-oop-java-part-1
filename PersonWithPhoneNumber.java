@@ -1,12 +1,12 @@
 
 import java.util.Calendar;
 
-public class Person {
+public class PersonWithPhoneNumber {
 
     private String name;
-    private String number
+    private String number;
 
-    public Person(String name, String number) {
+    public PersonWithPhoneNumber(String name, String number) {
         this.name = name;
         this.number = number;
     }
@@ -28,7 +28,7 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person pekka = new Person("Pekka Mikkola", "040-123123");
+        PersonWithPhoneNumber pekka = new PersonWithPhoneNumber("Pekka Mikkola", "040-123123");
 
         System.out.println(pekka.getName());
         System.out.println(pekka.getNumber());
