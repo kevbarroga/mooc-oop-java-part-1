@@ -31,6 +31,14 @@ public class Week_06 {
 
         System.out.println("Exercise 99: Array to stars");
         printArrayAsStars(array);
+
+        System.out.println("EXERCISE 104.1: SMALLEST");
+        int[] values = {6, 5, 8, 7, 11};
+        System.out.println("smallest: " + smallest(values));
+
+        System.out.println("EXERCISE 104.2: THE INDEX OF THE SMALLEST");
+
+
     }
 
     public static int sum(int[] array) {
@@ -84,5 +92,19 @@ public class Week_06 {
             }
         }
 		System.out.println();
+    }
+
+    public static int smallest(int[] array) {
+        int smallest = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (smallest > array[i]) {
+                smallest = array[i];
+            }
+        }
+        return smallest;
+    }
+
+    public static int indexOfTheSmallest(int[] array) {
+
     }
 }
