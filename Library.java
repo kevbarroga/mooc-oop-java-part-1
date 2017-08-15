@@ -20,10 +20,10 @@ public class Library {
     public ArrayList<Book> searchByTitle(String title) {
         ArrayList<Book> found = new ArrayList<Book>();
         // iterate the list of books and add all the matching books to the list found
-        for (Book bk : this.book) {
+        for (int i = 0; i < this.book.size(); i++) {
             if (StringUtils.included(this.book.get(i).title(), title)) {
             // if (this.book.title().contains(title)) {
-                found.add(title);
+                found.add(this.book.get(i));
             }
         }
         return found;
@@ -87,6 +87,6 @@ public class Library {
             System.out.println(book);
         }
 
-        System.out.println("EXERCISE 101.4: IMPROVED SEARCH");
+	}
 
 }

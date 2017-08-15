@@ -9,6 +9,7 @@ public class StringUtils {
     }
 
     public static void main(String[] args) {
+        System.out.println("EXERCISE 101.4: IMPROVED SEARCH");
         Library Library = new Library();
 
         Library.addBook(new Book("Cheese Problems Solved", "Woodhead Publishing", 2007));

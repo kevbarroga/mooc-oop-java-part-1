@@ -1,7 +1,7 @@
 public class Book {
     private String title;
     private String publisher;
-    private in year;
+    private int year;
 
     public Book(String title, String publisher, int year) {
         this.title = title;
@@ -21,7 +21,7 @@ public class Book {
         return year;
     }
 
-    public toString() {
+    public String toString() {
         return (this.title+", "+this.publisher+", "+Integer.toString(this.year));
     }
 
